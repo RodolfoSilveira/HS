@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import * as S from "./styles"
 import logo from "../../images/logo.png"
 import Menu from "../Menu"
@@ -6,7 +6,7 @@ import Menu from "../Menu"
 const Header: React.FC = () => {
   const [show, setShow] = useState(false);
 
-  function hendleMenu() {
+  function hendleMenu(): void {
     setShow(true)
     const menuSection = document.querySelector(".menu-section")
     const menuToggle = menuSection?.querySelector(".menu-toggle")
